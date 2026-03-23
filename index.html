@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사이버범죄 전문변호사 | 보이스피싱·딥페이크·해킹 | 나태근 변호사</title>
+  <meta name="description" content="국가정보원 사이버안보 담당관 출신, CISA·CISSP·CPPG 보유. 보이스피싱, 딥페이크, 명예훼손, 온라인사기, 해킹 사건을 기술적 전문성으로 변호합니다. 031-568-0602">
+  <meta name="keywords" content="사이버범죄 변호사, 사이버범죄 전문변호사, 보이스피싱 변호사, 딥페이크 변호사, 해킹 변호사, 명예훼손 변호사, 온라인사기 변호사">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="사이버범죄 전문변호사 | 나태근 변호사">
+  <meta property="og:description" content="사이버범죄, 기술을 아는 변호사가 다릅니다. 국정원 사이버안보 출신. 031-568-0602">
+  <meta property="og:url" content="https://cyber.ntg.kr">
+  <meta property="og:image" content="https://cyber.ntg.kr/images/og/default.png">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cyber.ntg.kr">
+  <link rel="icon" href="/favicon.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/shared.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "나태근 변호사 — 사이버범죄 전문",
+    "serviceType": "사이버범죄 변호",
+    "provider": {
+      "@type": "Attorney",
+      "name": "나태근",
+      "telephone": "031-568-0602",
+      "url": "https://ntg.kr"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "구리시"},
+      {"@type": "City", "name": "남양주시"}
+    ],
+    "url": "https://cyber.ntg.kr"
+  }
+  </script>
+  <style>
+    /* ===== HERO — Cyber Override ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 50%, var(--navy-800) 100%);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(0,212,255,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.04) 0%, transparent 50%);
+    }
+    .hero-vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, transparent 30%, var(--navy-950) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; max-width: 1100px; margin: 0 auto; padding: 120px 24px 80px;
+      display: grid; grid-template-columns: 1fr; gap: 48px; z-index: 2;
+    }
+    @media (min-width: 768px) {
+      .hero-content { grid-template-columns: 1fr 320px; align-items: center; padding-top: 140px; }
+    }
+    .hero-photo { display: none; position: relative; }
+    @media (min-width: 768px) { .hero-photo { display: block; } }
+    .hero-photo img {
+      width: 100%; border-radius: 20px; border: 1px solid var(--cyber-border);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 40px var(--cyber-glow);
+    }
+    .hero-photo-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 20px;
+      background: linear-gradient(transparent, rgba(5,13,26,0.9));
+      border-radius: 0 0 20px 20px;
+    }
+    .hero-photo-name { font-size: 18px; font-weight: 700; color: var(--white); }
+    .hero-photo-title { font-size: 13px; color: var(--cyber); font-weight: 500; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-scroll {
+      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: var(--white-30); font-size: 11px; letter-spacing: 2px; z-index: 2;
+      animation: float 2s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+    .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(var(--cyber-dim), transparent); }
+
+    /* ===== STATS ===== */
+    .stats-section {
+      padding: 80px 24px; background: var(--navy-900);
+      border-top: 1px solid var(--white-08); border-bottom: 1px solid var(--white-08);
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+    }
+    @media (min-width: 768px) { .stats-inner { grid-template-columns: repeat(4, 1fr); } }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: clamp(32px, 5vw, 48px); font-weight: 800;
+      font-variant-numeric: tabular-nums; letter-spacing: -0.04em;
+    }
+    .stat-unit { font-size: 16px; color: var(--cyber); font-weight: 600; margin-left: 2px; }
+    .stat-label { font-size: 14px; color: var(--white-30); margin-top: 4px; }
+
+    /* ===== WHY — 4 Holographic Cards ===== */
+    .why-section { padding: 100px 24px; background: var(--navy-950); }
+    .why-inner { max-width: 960px; margin: 0 auto; }
+    .why-grid-cyber {
+      display: grid; gap: 20px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .why-grid-cyber { grid-template-columns: repeat(2, 1fr); }
+    }
+    .why-card-label {
+      text-transform: uppercase; font-size: 11px; font-weight: 700;
+      color: var(--cyber); letter-spacing: 3px; margin-bottom: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .why-card-top-line {
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyber), transparent);
+    }
+    .holo-card .why-icon {
+      width: 52px; height: 52px; background: var(--cyber-glow);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .holo-card .why-icon svg { width: 24px; height: 24px; color: var(--cyber); }
+    .holo-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.4; }
+    .holo-card .why-desc { font-size: 14px; color: var(--white-50); line-height: 1.7; margin-bottom: 16px; }
+    .holo-card .why-bullets { list-style: none; padding: 0; margin: 0; }
+    .holo-card .why-bullets li {
+      padding: 5px 0; font-size: 14px; color: var(--white-50);
+      display: flex; align-items: flex-start; gap: 10px; line-height: 1.5;
+    }
+    .holo-card .why-bullets li::before {
+      content: ''; width: 5px; height: 5px; background: var(--cyber);
+      border-radius: 50%; margin-top: 7px; flex-shrink: 0;
+    }
+
+    /* ===== AREAS — 6 Practice Area Cards ===== */
+    .areas { padding: 100px 24px; background: var(--navy-900); }
+    .areas-inner { max-width: 960px; margin: 0 auto; }
+    .areas-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 600px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px) { .areas-grid { grid-template-columns: repeat(3, 1fr); } }
+    .area-card {
+      display: block; position: relative;
+    }
+    .area-card .holo-card { height: 100%; display: flex; flex-direction: column; }
+    .area-card-icon {
+      width: 48px; height: 48px; background: var(--cyber-glow);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .area-card-icon svg { width: 24px; height: 24px; color: var(--cyber); }
+    .area-card-title { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .area-card-desc { font-size: 14px; color: var(--white-50); line-height: 1.6; flex: 1; }
+    .area-card-arrow {
+      font-size: 18px; color: var(--cyber-dim); margin-top: 16px;
+      transition: all 0.3s; display: inline-block;
+    }
+    .area-card:hover .area-card-arrow { color: var(--cyber); transform: translateX(4px); }
+
+    /* ===== CASES ===== */
+    .cases { padding: 100px 24px; background: var(--navy-950); }
+    .cases-inner { max-width: 900px; margin: 0 auto; }
+    .cases-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 600px) { .cases-grid { grid-template-columns: repeat(2, 1fr); } }
+    .case-card {
+      background: var(--white-04); border: 1px solid var(--white-08);
+      border-radius: 16px; padding: 28px; transition: all 0.3s;
+    }
+    .case-card:hover { border-color: var(--cyber-border); background: var(--white-08); }
+    .case-tag {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      padding: 4px 10px; border-radius: 6px; margin-bottom: 12px;
+    }
+    .case-tag-green { background: rgba(34,197,94,0.15); color: #4ade80; }
+    .case-tag-blue { background: rgba(59,130,246,0.15); color: #60a5fa; }
+    .case-title { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .case-desc { font-size: 14px; color: var(--white-50); line-height: 1.7; }
+
+    /* ===== FAQ ===== */
+    .faq-section { padding: 100px 24px; background: var(--navy-900); }
+    .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--white-08); padding: 28px 0; }
+    .faq-item:first-child { padding-top: 0; }
+    .faq-item:last-child { border-bottom: none; }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      padding: 100px 24px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, var(--cyber-glow), transparent 70%);
+    }
+    .cta-inner {
+      position: relative; max-width: 700px; margin: 0 auto; text-align: center;
+    }
+    .cta-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--cyber-glow); border: 1px solid rgba(0,212,255,0.3);
+      border-radius: 100px; padding: 8px 20px; font-size: 14px; font-weight: 600;
+      color: var(--cyber-light); margin-bottom: 28px;
+    }
+    .cta-section h2 {
+      font-size: clamp(28px, 5vw, 44px); font-weight: 800; color: var(--white);
+      line-height: 1.3; margin-bottom: 20px; letter-spacing: -0.02em;
+    }
+    .cta-section p { font-size: 17px; color: var(--white-50); margin-bottom: 32px; line-height: 1.6; }
+    .cta-phone-row {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      margin-bottom: 28px;
+    }
+    .cta-phone-icon {
+      width: 56px; height: 56px; background: var(--gold); border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cta-phone-icon svg { width: 24px; height: 24px; color: var(--navy-950); }
+    .cta-phone-number { font-size: 36px; font-weight: 800; color: var(--white); letter-spacing: -0.02em; }
+    .cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    /* ===== MAP ===== */
+    .map-section { padding: 80px 24px; background: var(--navy-900); border-top: 1px solid var(--white-08); }
+    .map-inner { max-width: 900px; margin: 0 auto; display: grid; gap: 32px; }
+    @media (min-width: 768px) { .map-inner { grid-template-columns: 1fr 1fr; align-items: center; } }
+    .map-img { border-radius: 16px; overflow: hidden; border: 1px solid var(--white-08); }
+    .map-img img { width: 100%; display: block; }
+    .map-info h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+    .map-info p { font-size: 15px; color: var(--white-50); line-height: 1.7; margin-bottom: 8px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 767px) {
+      .why-grid-cyber { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <a href="/" class="header-logo">사이버범죄 전문변호사</a>
+  <nav class="header-nav">
+    <a href="/" class="active">메인</a>
+    <a href="/phishing/">보이스피싱</a>
+    <a href="/deepfake/">딥페이크</a>
+    <a href="/defamation/">명예훼손</a>
+    <a href="/online-fraud/">온라인사기</a>
+    <a href="/hacking/">해킹</a>
+    <a href="/accused/">피의자대응</a>
+  </nav>
+  <a href="tel:031-568-0602" class="header-phone">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    031-568-0602
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero scanlines">
+  <!-- Matrix Rain -->
+  <div class="matrix-rain">
+    <span class="matrix-col" style="left:4%;animation-duration:12s;animation-delay:-2s;">0 1 { } < > / * # $ 0 1 @ { 0 1 < > # $ 1 0</span>
+    <span class="matrix-col" style="left:10%;animation-duration:18s;animation-delay:-8s;">1 0 # @ { } * / > < 1 0 $ { } 0 1 # @ < ></span>
+    <span class="matrix-col" style="left:16%;animation-duration:9s;animation-delay:-3s;">{ } 0 1 * $ @ # < > / 1 0 { } # $ 0 1 @ *</span>
+    <span class="matrix-col" style="left:22%;animation-duration:22s;animation-delay:-15s;">@ # 1 0 < > { } $ * / 0 1 @ # { } < > $ 1</span>
+    <span class="matrix-col" style="left:28%;animation-duration:14s;animation-delay:-5s;">0 { 1 } < * > # $ @ / 1 { 0 } > # $ @ 0 1</span>
+    <span class="matrix-col" style="left:35%;animation-duration:20s;animation-delay:-12s;">1 @ 0 # { } < > * $ / 0 @ 1 # } { > < $ 0</span>
+    <span class="matrix-col" style="left:42%;animation-duration:11s;animation-delay:-1s;">$ # 0 1 { } @ * < > / 1 # $ 0 { } @ * > <</span>
+    <span class="matrix-col" style="left:50%;animation-duration:25s;animation-delay:-18s;">< > 1 0 @ # { } * $ / 0 > < 1 @ # } { * $</span>
+    <span class="matrix-col" style="left:58%;animation-duration:13s;animation-delay:-7s;">* / 0 1 $ @ # { } < > 1 / * 0 $ @ # } { ></span>
+    <span class="matrix-col" style="left:65%;animation-duration:17s;animation-delay:-10s;">{ 0 1 } @ # $ * < > / 0 { 1 } # @ $ * > <</span>
+    <span class="matrix-col" style="left:72%;animation-duration:10s;animation-delay:-4s;">1 < 0 > { } # @ $ * / 0 < 1 > } { @ # * $</span>
+    <span class="matrix-col" style="left:80%;animation-duration:21s;animation-delay:-16s;">@ { 1 0 } # $ * < > / 1 { @ 0 } # $ > < *</span>
+    <span class="matrix-col" style="left:88%;animation-duration:15s;animation-delay:-9s;">0 * 1 / { } @ # $ < > 1 * 0 / } { # @ < $</span>
+    <span class="matrix-col" style="left:95%;animation-duration:19s;animation-delay:-13s;"># $ 0 1 @ { } < > * / 0 $ # 1 @ } { > < *</span>
+  </div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        사이버안보 전문가 · IT보안 국제자격 3종
+      </div>
+      <h1 class="hero-title glitch" data-text="사이버범죄, 기술을 아는 변호사가 다릅니다">
+        사이버범죄,<br>
+        <em>기술을 아는 변호사가<br>다릅니다</em>
+      </h1>
+      <p class="hero-sub">
+        국가정보원 사이버안보 담당관 출신 · CISA·CISSP·CPPG 보유<br>
+        형사 전문 변호사가 수사 단계부터 체계적으로 대응합니다
+      </p>
+      <div class="hero-cta">
+        <a href="tel:031-568-0602" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          지금 전화 상담
+        </a>
+        <a href="https://ugulhae.com" target="_blank" class="btn-secondary">비대면 상담 접수 →</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/images/profile.png" alt="나태근 변호사" loading="eager">
+      <div class="hero-photo-overlay">
+        <div class="hero-photo-name">나태근</div>
+        <div class="hero-photo-title">대표변호사 · 국정원 사이버안보 출신</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    SCROLL
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section fade-up">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-number cyber-glow">15<span class="stat-unit">년+</span></div>
+      <div class="stat-label">법률 경력</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number cyber-glow">3<span class="stat-unit">종</span></div>
+      <div class="stat-label">IT보안 국제자격</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number cyber-glow">국정원</div>
+      <div class="stat-label">사이버안보 담당관</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number cyber-glow">개인정보보호위</div>
+      <div class="stat-label">위원 역임</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section fade-up">
+  <div class="why-inner">
+    <div class="section-label">Why</div>
+    <div class="section-title">왜 사이버범죄는 나태근 변호사인가</div>
+
+    <div class="why-grid-cyber">
+      <!-- Card 1: NIS -->
+      <div class="holo-card">
+        <div class="why-card-top-line"></div>
+        <div class="why-card-label">Core Expertise</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.25 3.75 10.13 9 11.25C17.25 23.13 21 18.25 21 13V7l-9-5z"/><path d="M9 12l2 2 4-4"/><path d="M8 8h2v2H8zM14 14h2v2h-2z"/></svg>
+        </div>
+        <h3>국가정보원<br>사이버안보 정책기획담당관</h3>
+        <p class="why-desc">국가정보원에서 사이버안보 정책을 직접 기획한 경험으로, 사이버범죄 수사 구조를 정확히 이해합니다.</p>
+        <ul class="why-bullets">
+          <li>다크웹·텔레그램 범죄 수사 구조 파악</li>
+          <li>디지털 포렌식 절차와 증거 확보 과정 이해</li>
+          <li>암호화폐 거래 추적 수사 대응</li>
+          <li>통신수사 적법성·영장 범위 검토</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Certifications -->
+      <div class="holo-card">
+        <div class="why-card-top-line"></div>
+        <div class="why-card-label">Credentials</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M12 15l-3 6 3-2 3 2-3-6"/><path d="M9 9h6M12 6v6"/></svg>
+        </div>
+        <h3>CISA · CISSP · CPPG<br>국제자격 3종 보유</h3>
+        <p class="why-desc">변호사 중 IT보안 국제자격 보유자는 극소수입니다. 기술적 증거를 직접 분석·반박할 수 있는 역량을 갖추고 있습니다.</p>
+        <ul class="why-bullets">
+          <li>CISA — 정보시스템 감사 전문가</li>
+          <li>CISSP — 정보보안 전문가 (국제 최고 자격)</li>
+          <li>CPPG — 개인정보관리 전문가</li>
+          <li>디지털 증거 기술적 분석·반박 가능</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Privacy Committee -->
+      <div class="holo-card">
+        <div class="why-card-top-line"></div>
+        <div class="why-card-label">Authority</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/><rect x="10" y="9" width="4" height="4" rx="1"/><path d="M12 9v-1M12 13v1"/></svg>
+        </div>
+        <h3>대통령 직속<br>개인정보보호위원회 위원</h3>
+        <p class="why-desc">개인정보보호법의 제도적 관점을 이해하고, 데이터 침해 사건에서 법률과 기술을 동시에 검토합니다.</p>
+        <ul class="why-bullets">
+          <li>개인정보 침해 사건 법리 전문</li>
+          <li>정보통신망법 위반 사건 대응</li>
+          <li>개인정보 유출·오남용 피해 구제</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: SNU Engineering -->
+      <div class="holo-card">
+        <div class="why-card-top-line"></div>
+        <div class="why-card-label">Background</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+        </div>
+        <h3>서울대 공대 출신<br>기술적 분석력</h3>
+        <p class="why-desc">공학적 사고로 디지털 증거를 분석하고, 기술적 쟁점을 법리와 연결하여 효과적인 변호 전략을 수립합니다.</p>
+        <ul class="why-bullets">
+          <li>네트워크·서버 로그 분석 역량</li>
+          <li>기술적 쟁점의 법률 논증 전환</li>
+          <li>전문가 감정 결과 검증·반박</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="areas fade-up">
+  <div class="areas-inner">
+    <div class="section-label">Practice Areas</div>
+    <div class="section-title">사이버범죄 전문 분야</div>
+
+    <div class="areas-grid">
+      <!-- 1. 보이스피싱 -->
+      <a href="/phishing/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3"/><path d="M15 3h4v4"/><path d="M14 10L19 3"/><circle cx="12" cy="16" r="1"/></svg>
+          </div>
+          <div class="area-card-title">보이스피싱</div>
+          <div class="area-card-desc">피해금 환급부터 수거책·인출책 변호까지</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 2. 딥페이크 -->
+      <a href="/deepfake/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 21h10"/><path d="M12 17v4"/><path d="M17 7l2-2M5 7L3 5"/></svg>
+          </div>
+          <div class="area-card-title">딥페이크·불법촬영</div>
+          <div class="area-card-desc">디지털 증거 전문가의 삭제·대응·변호</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 3. 명예훼손 -->
+      <a href="/defamation/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M12 8v4"/><circle cx="12" cy="14" r="0.5" fill="currentColor"/></svg>
+          </div>
+          <div class="area-card-title">명예훼손·사이버불링</div>
+          <div class="area-card-desc">고소 대리와 피의자 방어 전략</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 4. 온라인사기 -->
+      <a href="/online-fraud/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/><path d="M12 10l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+          </div>
+          <div class="area-card-title">온라인사기</div>
+          <div class="area-card-desc">중고거래·투자·쇼핑몰 사기 법률 대응</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 5. 해킹 -->
+      <a href="/hacking/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/><rect x="10" y="10" width="4" height="4" rx="1"/></svg>
+          </div>
+          <div class="area-card-title">해킹·랜섬웨어</div>
+          <div class="area-card-desc">정보통신망법 위반 전문 대응</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 6. 피의자 긴급대응 -->
+      <a href="/accused/" class="area-card">
+        <div class="holo-card">
+          <div class="area-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>
+          </div>
+          <div class="area-card-title">피의자 긴급대응</div>
+          <div class="area-card-desc">체포·구속부터 디지털 포렌식 반박까지</div>
+          <span class="area-card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases fade-up">
+  <div class="cases-inner">
+    <div class="section-label">Cases</div>
+    <div class="section-title">성공사례</div>
+
+    <div class="cases-grid">
+      <div class="case-card">
+        <span class="case-tag case-tag-green">불기소</span>
+        <div class="case-title">보이스피싱 수거책 혐의</div>
+        <div class="case-desc">단순 심부름임을 입증하여 불기소 처분을 이끌어냈습니다.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-tag case-tag-green">승소</span>
+        <div class="case-title">딥페이크 피해 손해배상</div>
+        <div class="case-desc">유포자를 특정하고 손해배상을 인용받았습니다.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-tag case-tag-blue">무죄</span>
+        <div class="case-title">온라인 명예훼손 무죄</div>
+        <div class="case-desc">공익 목적의 진실한 사실 적시임을 인정받았습니다.</div>
+      </div>
+      <div class="case-card">
+        <span class="case-tag case-tag-blue">감형</span>
+        <div class="case-title">해킹 혐의 집행유예</div>
+        <div class="case-desc">초범·반성·피해보상을 통해 실형을 면하고 집행유예를 받았습니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section fade-up">
+  <div class="faq-inner">
+    <div class="section-label">FAQ</div>
+    <div class="section-title">자주 묻는 질문</div>
+
+    <div class="faq-item">
+      <div class="terminal-q">사이버범죄로 경찰에서 연락이 왔습니다. 어떻게 해야 하나요?</div>
+      <div class="terminal-a">즉시 변호사와 상담하세요. 경찰 출석 전 진술 전략을 수립하는 것이 중요합니다. 특히 사이버범죄는 디지털 증거의 적법성이 핵심 쟁점이 되므로, IT 전문 변호사의 조력이 필수적입니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="terminal-q">보이스피싱 피해금을 돌려받을 수 있나요?</div>
+      <div class="terminal-a">피해 즉시 112 신고 후 계좌 동결을 요청하면 피해금 일부를 환급받을 수 있습니다. 또한 수거책·인출책에 대한 민사소송으로 추가 배상을 받을 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="terminal-q">IP 주소만으로 유죄 판결이 나나요?</div>
+      <div class="terminal-a">IP 주소만으로는 범인 특정이 어렵습니다. 공용 Wi-Fi, VPN, IP 도용 가능성 등을 반박할 수 있으며, 디지털 포렌식 결과의 증거능력도 다툴 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="terminal-q">변호사 비용은 얼마인가요?</div>
+      <div class="terminal-a">사건 유형, 혐의 경중, 피해자/피의자 여부에 따라 달라집니다. 전화 상담 시 대략적인 안내가 가능합니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section fade-up">
+  <div class="cta-inner">
+    <div class="cta-badge">지금 바로 상담하세요</div>
+    <h2>사이버범죄는<br>시간이 지날수록 불리해집니다</h2>
+    <p>디지털 증거는 시간이 지나면 삭제·변조될 수 있습니다.<br>지금 바로 전문가와 상담하세요.</p>
+    <div class="cta-phone-row">
+      <div class="cta-phone-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <a href="tel:031-568-0602" class="cta-phone-number">031-568-0602</a>
+    </div>
+    <div class="cta-buttons">
+      <a href="tel:031-568-0602" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        전화 상담
+      </a>
+      <a href="https://ugulhae.com" target="_blank" class="btn-secondary">비대면 상담 접수 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section fade-up">
+  <div class="map-inner">
+    <div class="map-img">
+      <a href="https://naver.me/Gq9Tp4PO" target="_blank">
+        <img src="/images/map.png" alt="오시는 길 — 경기 구리시 장자대로1번길 4">
+      </a>
+    </div>
+    <div class="map-info">
+      <h3>오시는 길</h3>
+      <p>경기 구리시 장자대로1번길 4</p>
+      <p>장자호수공원역 2번 출구에서 613m</p>
+      <p style="margin-top:8px;">
+        <a href="tel:031-568-0602" style="color:var(--cyber);font-weight:700;">031-568-0602</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://ntg.kr" target="_blank">ntg.kr</a>
+    <a href="https://ugulhae.com" target="_blank">ugulhae.com</a>
+  </div>
+  <div class="footer-copy">
+    나태근법률사무소<br>
+    대표변호사: 나태근 | 사업자등록번호: 307-21-13959<br>
+    경기 구리시 장자대로1번길 4 | 전화: 031-568-0602<br><br>
+    &copy; 2026 나태근법률사무소
+  </div>
+</footer>
+
+<!-- MOBILE CTA BAR -->
+<div class="mobile-cta">
+  <a href="tel:031-568-0602">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    전화 상담
+  </a>
+  <a href="https://ugulhae.com" target="_blank">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    비대면 상담
+  </a>
+</div>
+
+<!-- JS: Intersection Observer for fade-up -->
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
