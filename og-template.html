@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px;
+    background: #050D1A;
+    font-family: 'Pretendard Variable', sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  /* 시안 글로우 라인 */
+  .line-top, .line-bottom { position: absolute; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, #00D4FF, #A855F7, transparent); }
+  .line-top { top: 0; }
+  .line-bottom { bottom: 0; }
+  /* 매트릭스 배경 */
+  .matrix { position: absolute; inset: 0; opacity: 0.04; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #00D4FF; line-height: 1.8; word-break: break-all; padding: 20px; overflow: hidden; }
+  /* 스캔라인 */
+  .scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px); pointer-events: none; }
+  .panel {
+    background: rgba(15,31,61,0.95); border-radius: 24px; padding: 50px 80px; text-align: center;
+    border: 1px solid rgba(0,212,255,0.15); position: relative; z-index: 1;
+    box-shadow: 0 0 60px rgba(0,212,255,0.08);
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 100px; padding: 6px 20px; font-size: 14px; font-weight: 600;
+    color: #67E8F9; margin-bottom: 20px;
+  }
+  .badge-dot { width: 8px; height: 8px; background: #00D4FF; border-radius: 50%; box-shadow: 0 0 8px #00D4FF; }
+  .main-text { font-size: 72px; font-weight: 800; color: #fff; letter-spacing: 6px; margin-bottom: 8px; text-shadow: 0 0 40px rgba(0,212,255,0.3); }
+  .main-sub { font-size: 28px; font-weight: 700; color: #00D4FF; letter-spacing: 2px; margin-bottom: 20px; }
+  .divider { width: 200px; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,212,255,0.4), transparent); margin: 0 auto 20px; }
+  .sub-text { font-size: 22px; color: rgba(255,255,255,0.4); letter-spacing: 3px; margin-bottom: 12px; }
+  .phone { font-size: 20px; color: rgba(255,255,255,0.2); letter-spacing: 2px; }
+  .creds { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: rgba(0,212,255,0.5); letter-spacing: 1px; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+  <div class="line-top"></div>
+  <div class="line-bottom"></div>
+  <div class="matrix">01{&lt;script&gt;}0x4F2A#include&lt;stdio&gt;10110100def main():return 0xFF;class Cyber{}01console.log()import*{0b1010}SELECT*FROM#!bin/bash$echo@media(0x00D4FF)while(true){break;}catch(e){}async await fetch()Promise.resolve()01101001{json:"ld"}@keyframes glitch{}transform:translate()rgba(0,212,255,0.3)var(--cyber)10101010&lt;/head&gt;&lt;body&gt;01{&lt;script&gt;}0x4F2A#include</div>
+  <div class="scanlines"></div>
+  <div class="panel">
+    <div class="badge"><span class="badge-dot"></span>사이버범죄 전문</div>
+    <div class="main-text">나태근 변호사</div>
+    <div class="main-sub">사이버범죄 전문변호사</div>
+    <div class="creds">CISA · CISSP · CPPG — 국정원 사이버안보 출신</div>
+    <div class="divider"></div>
+    <div class="sub-text">보이스피싱 · 딥페이크 · 해킹 · 명예훼손</div>
+    <div class="phone">구리 · 남양주 031-568-0602</div>
+  </div>
+</body>
+</html>
